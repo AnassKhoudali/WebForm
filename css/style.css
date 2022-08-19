@@ -1,0 +1,243 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+header{
+    padding: 1rem;
+}
+h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+header, footer, input{
+    background-color:#00a15e;
+    color:#fff;
+}
+input{
+    cursor: pointer;
+}
+
+h1, h2, h3{
+ font-family: 'Bebas Neue', cursive; 
+}
+div{
+    margin:1.5rem 0;
+}
+a,p, input, div, span, ul{
+ font-family: 'Roboto', sans-serif;
+ line-height: 1.5rem;
+ 
+}
+
+.instructions li{
+    list-style: disc;
+    list-style-position: inside;
+}
+
+ol{
+    list-style: decimal;
+    margin-left: 20px;
+}
+
+li>div{
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+
+ section.erreurs a{
+     text-decoration: none;
+     background-color: #fab0b0;
+     color: #4e0a0a;
+     text-align: center;
+     display: none;
+     border-radius: 30px;
+     border: 1px solid #4e0a0a; 
+     max-width: 95%;
+     width: 90%;
+     margin: 0 auto;
+}
+
+section.erreurs a:hover{
+    background-color: #e07272;
+    cursor: pointer;
+    color :#000;
+    width: 92%;
+    height: 1.8em;
+    transition: width  .1s linear;
+    margin-top: .5px;
+    margin-bottom: .5px;
+}
+
+ section.resultats{
+     margin-bottom: 20px;
+     display: none;
+ }
+
+ div.resultats{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     margin-top: 50px;
+ }
+
+ .indices{
+     display: flex;
+     flex-direction: column-reverse;
+ }
+
+ .diagramme{
+     position: relative;
+     border-left: 2px solid #000;
+     border-bottom: 2px solid #000;
+     height: 15rem;
+     width:15rem;
+}
+
+.options{
+    position:absolute;
+    bottom: -1.5rem;
+    left: 1rem;
+    background-color: #48ce96;
+    border-radius : .3rem .3rem 0 0;
+    margin-left: 1rem;
+    width: 5rem;
+    height: 0rem;
+    transition: height 1s ease-out;
+}
+
+.titleOptions{
+    position : relative;
+    left : 2.5rem;
+}
+
+
+
+.procedures{
+    background-color: rgb(41, 127, 207);
+    position: absolute;
+    bottom: -1.5rem;
+    left: 7rem;
+    border-radius : .3rem .3rem 0 0;
+    margin-left: 1rem;
+    width: 5rem;
+    height: 0rem;
+    transition: height .5s ease-out;
+}
+.titleProcedures{
+   position : relative;
+   left : 4.2rem;
+}
+
+.titles{
+    position : absolute;
+    bottom : -3.5rem;
+    width : 15rem;
+    
+}
+
+div.resultatsText{
+    position : absolute;
+    bottom : -8rem;
+    width: max-content;
+    text-align: center;
+    font-size: 18px;
+}
+
+ #methodique,#plusOptions {
+    display: none;
+}
+
+div.buttonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.button{
+    width: 10rem;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+}
+
+div.buttonsContainer>input:hover{
+    background-color: #08b96f;
+}
+
+div.buttonsContainer>input:active{
+    background-color:#097749;
+}
+
+footer{
+    margin-top: 100px;
+    padding: .5rem;
+}
+
+footer div{
+    line-height: .5rem;
+}
+
+h2{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+@media print{
+    @page {
+        margin: 0;
+        }
+    .instructions, .questionnaire, footer, .resultats .buttonsContainer{
+        display : none;
+    }
+    
+}
+
+.A{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.B{
+    margin-top: 150px;
+}
+
+/* pour les animations des elements caches. */
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0)
+    }
+    to {
+      opacity: 1;
+      transform: scale(1)
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: scale(1)
+    }
+    to {
+      opacity: 0;
+      transform: scale(0)
+    }
+  }

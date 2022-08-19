@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÉTAPROGRAMME 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="Page">
+    <header>
+        <div class="wrapper">
+
+            <h1>PROFIL PERSONNEL</h1>
+            <h3>MÉTAPROGRAMME 3</h3>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <section class="instructions" data-html2canvas-ignore="true">
+                <div>
+                    <p>
+                        Ce questionnaire, respectueux de votre vie privée,
+                        tend à vous donner plus de clarté sur votre style de perception,
+                        vos canaux de communication préférés et vos structures mentales
+                        dans certains contextes.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Les méta-programmes sont des filtres propres à individu qui déterminent
+                        la façon de se comporter, de penser et de ressentir. Ces filtres guident
+                        la perception de la réalité et forment ainsi notre modèle du monde.
+                    </p>
+                </div>
+                <div>
+                    <p>Ce questionnaire :</p>
+                    <ul>
+                        <li>Augmentera votre connaissancede vous-même et des personnes avec qui vous communiquez</li>
+                        <li>vous éclairerasur votre façon d'établir les relations avec les autres.</li>
+                        <li>Vous montrera quelles sont vos motivations de base et celles de vos collègues pour une
+                            collaboration
+                            encore plus efficace.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Instructions :</p>
+                    <p>contrairement à d'autres tests à choix multiples,
+                        pour obtenir des résultats intéressants, vous pouvez
+                        ici entourer toutes les répnses(ex a,b et c ou a et c)
+                        qui sont pertinentes pour vous et si aucune ne l'est, ne rien entourer.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Soyez honnête avec vous-même dans vos réponses
+                        et répndez sans trop réfléchir.Votre première
+                        réaction est la meilleure.
+                    </p>
+                </div>
+            </section>
+            <section class="questionnaire" data-html2canvas-ignore="true">
+                <h2>Métaprogramme 3</h2>
+                <ol>
+                    <li>
+                        <p id="Question1">Je préfère travailler dans un environnement où chaque jour est... :</p>
+                        <div>
+                            <label for="1">Nouveau et présentes des challenges.</label>
+                            <input type="checkbox" name="A" class="radio" id="1">
+                        </div>
+                        <div>
+                            <label for="2">Régulier et je sais à quoi m'attendre.</label>
+                            <input type="checkbox" name="A" class="radio" id="2">
+                        </div>
+                    </li>
+                    <li>
+                        <p id="Question2">Loesqu'il s'agit de prendre une décision, je préfère... :</p>
+                        <div>
+
+                            <label for="3">Évaluer toutes les possiblités.</label>
+                            <input type="checkbox" name="B" class="radio" id="3">
+                        </div>
+
+                        <div>
+                            <label for="4">Prendre une décision et la mettre en oeuvre.</label>
+                            <input type="checkbox" name="B" class="radio" id="4">
+                        </div>
+                    </li>
+                    <li>
+                        <p id="Question3">Si j'ai le choix, je préfère... :</p>
+                        <div>
+                            <label for="5">Créer une nouvelle façon de faire.</label>
+                            <input type="checkbox" name="C" class="radio" id="5">
+                        </div>
+                        <div>
+                            <label for="6">Faire ce qui marche de façon certaine.</label>
+                            <input type="checkbox" name="C" class="radio" id="6">
+                        </div>
+                    </li>
+                    <li>
+                        <p id="Question4">J'aime... :</p>
+                        <div>
+                            <label for="7">Être spontané.</label>
+                            <input type="checkbox" name="D" class="radio" id="7">
+                        </div>
+                        <div>
+                            <label for="8">Préparer un plan d'action.</label>
+                            <input type="checkbox" name="D" class="radio" id="8">
+
+                        </div>
+                    </li>
+                    <li>
+                        <p id="Question5">J'apprécie... :</p>
+                        <div>
+                            <label for="9">Les environnements changeants.</label>
+                            <input type="checkbox" name="E" class="radio" id="9">
+                        </div>
+                        <div>
+                            <label for="10">Le statu quo.</label>
+                            <input type="checkbox" name="E" class="radio" id="10">
+                        </div>
+                    </li>
+                    <li>
+                        <p id="Question6">J'aime... :</p>
+                        <div>
+                            <label for="11">Avoir des changements de rythme.</label>
+                            <input type="checkbox" name="F" class="radio" id="11">
+                        </div>
+                        <div>
+                            <label for="12">Suivre une routine ou une procédure.</label>
+                            <input type="checkbox" name="F" class="radio" id="12">
+                        </div>
+                    </li>
+                    <li>
+                        <p id="Question7">Je suis attiré par ce qui est... :</p>
+                        <div>
+                            <label for="13">Possible.</label>
+                            <input type="checkbox" name="G" class="radio" id="13">
+                        </div>
+                        <div>
+                            <label for="14">Faisable.</label>
+                            <input type="checkbox" name="G" class="radio" id="14">
+                        </div>
+                    </li>
+                    <li>
+                        <p id="Question8">J'ai tendence à... :</p>
+                        <div>
+                            <label for="15">Faire plusieurs choses en même temps.</label>
+                            <input type="checkbox" name="H" class="radio" id="15">
+                        </div>
+                        <div>
+                            <label for="16">Faire une chose à la fois.</label>
+                            <input type="checkbox" name="H" class="radio" id="16">
+                        </div>
+                    </li>
+                    <li>
+                        <p id="Question9">j'ai tendence à être... :</p>
+                        <div>
+                            <label for="17">Adaptable.</label>
+                            <input type="checkbox" name="I" class="radio" id="17">
+                        </div>
+                        <div>
+                            <label for="18">Méthodique.</label>
+                            <input type="checkbox" name="I" class="radio" id="18">
+                        </div>
+                    </li>
+                </ol>
+                <div class="buttonsContainer A">
+                    <input type="button" class="button" value="Voir mes résultats" id="boutonVoirResultats">
+                </div>
+            </section>
+            <section class="erreurs" id="ErreursId">
+                <a id="erreur1" href="#Question1">La question 1 n'a pas été répondue</a>
+                <a id="erreur2" href="#Question2">La question 2 n'a pas été répondue</a>
+                <a id="erreur3" href="#Question3">La question 3 n'a pas été répondue</a>
+                <a id="erreur4" href="#Question4">La question 4 n'a pas été répondue</a>
+                <a id="erreur5" href="#Question5">La question 5 n'a pas été répondue</a>
+                <a id="erreur6" href="#Question6">La question 6 n'a pas été répondue</a>
+                <a id="erreur7" href="#Question7">La question 7 n'a pas été répondue</a>
+                <a id="erreur8" href="#Question8">La question 8 n'a pas été répondue</a>
+                <a id="erreur9" href="#Question9">La question 9 n'a pas été répondue</a>
+            </section>
+            <section class="resultats" id="resulatsId">
+                <div class="resultats">
+                    <ul class="indices">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                    </ul>
+                    <div class="diagramme">
+                        <div class="options" id="options"></div>
+                        <div class="procedures" id="procedures"></div>
+                        <div class="titles">
+                            <span class="titleOptions">Options</span>
+                            <span class="titleProcedures">Procedures</span>
+                        </div>
+                        <div class="resultatsText">
+                            <p id="methodique" class="text">Vous êtres plus méthodique !</p>
+                            <p id="plusOptions" class="text">Vous aimez avoir plus d'options !</p>
+                            <p id="Equilibre" class="text">Vous êtes plutôt équilibré !</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonsContainer B" id="buttonsContainer2" data-html2canvas-ignore="true">
+                    <input type="button" class="button" value="Sauvegarder" id="sauvegarderId">
+                    <input type="button" class="button" value="Imprimer" id="imprimerId">
+                </div>
+            </section>
+    </main>
+    </div>
+    <footer>
+        <div class="wrapper" data-html2canvas-ignore="true">
+            <div>Développé par Anass Khoudali</div>
+            <div>&copy;collége lacité</div>
+        </div>
+    </footer>
+</body>
+<script src="./js/html2pdf.bundle.min (1).js"></script>
+<script src="./js/main.js"></script>
+
+</html>
